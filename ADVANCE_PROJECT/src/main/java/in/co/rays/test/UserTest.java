@@ -10,8 +10,9 @@ public class UserTest {
 
 	public static void main(String[] args) throws Exception {
 
-		//testAdd();
-		testAuth();
+		testAdd();
+		//testAuth();
+		testForgetPwd();
 
 	}
 
@@ -20,12 +21,12 @@ public class UserTest {
 
 		SimpleDateFormat sdf = new SimpleDateFormat("MM-DD-yyy");
 
-		bean.setName("Akshay");
-		bean.setLogin("akshay@gmail.com");
+		bean.setName("Aksh");
+		bean.setLogin("aksh@gmail.com");
 		bean.setPassword("123");
 		bean.setConfirmPassword("123");
 		bean.setDob(sdf.parse("12-11-1996"));
-		bean.setMobileNo(123456);
+		bean.setMobileNo("1234567890");
 
 		UserModel model = new UserModel();
 
@@ -49,5 +50,24 @@ public class UserTest {
 			System.out.println("user Invalid");
 		}
 
+	}
+	
+	private static void testForgetPwd() throws Exception
+	{
+		UserBean bean = new UserBean();
+		bean.setLogin("akash@gmail.com");
+		
+		UserModel model = new UserModel();
+		UserBean bean1 = model.forgetPassword(bean);
+		
+		if(bean!= null)
+		{
+			System.out.println("Valid Login" + " "+ bean1.getPassword());
+			
+		}
+		else
+		{
+			System.out.println("Invalid Login");
+		}
 	}
 }

@@ -2,6 +2,7 @@ package in.co.rays.ctl;
 
 import java.io.IOException;
 
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -62,7 +63,7 @@ public class LoginCtl extends HttpServlet {
 			} else {
 
 				if (bean1 != null) {
-					RequestDispatcher rd = req.getRequestDispatcher("WelcomeView.jsp");
+					RequestDispatcher rd = req.getRequestDispatcher("welcome");
 
 					req.setAttribute("user", bean1.getName());
 

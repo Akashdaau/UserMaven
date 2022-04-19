@@ -7,11 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%@include file="Header.jsp"%>
 	<h1>User Login SuccessFully</h1>
 
 	<%
 		String user = (String) request.getAttribute("user");
+		RequestDispatcher rd = request.getRequestDispatcher("Header.jsp");
+		request.setAttribute("name", user);
+		rd.forward(request, response);
 	%>
-	<%=user%>
+	<hr>
 </body>
 </html>

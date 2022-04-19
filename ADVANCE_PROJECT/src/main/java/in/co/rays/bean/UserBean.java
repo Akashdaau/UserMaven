@@ -10,7 +10,7 @@ public class UserBean {
 	private String password;
 	private String confirmPassword;
 	private Date dob;
-	private long mobileNo;
+	private String mobileNo;
 
 	public int getId() {
 		return id;
@@ -60,11 +60,11 @@ public class UserBean {
 		this.dob = dob;
 	}
 
-	public long getMobileNo() {
+	public String getMobileNo() {
 		return mobileNo;
 	}
 
-	public void setMobileNo(long mobileNo) {
+	public void setMobileNo(String mobileNo) {
 		this.mobileNo = mobileNo;
 	}
 

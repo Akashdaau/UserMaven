@@ -8,6 +8,7 @@
 </head>
 <body>
 	<form action="login" method="post">
+		<%@include file="Header.jsp"%>
 		<div align="center">
 
 			<%
@@ -20,7 +21,7 @@
 			<table>
 				<tr>
 					<th>Login :</th>
-					<td><input type="text" name="login"></td>
+					<td><input type="email" name="login"></td>
 					<td>
 						<%
 							String err1 = (String) request.getAttribute("err1");
@@ -46,10 +47,30 @@
 					<th></th>
 					<td><input type="submit" value="Login"></td>
 				</tr>
+				<tr>
+					<td></td>
+					<td><a href="ForgetPasswordView.jsp">Forgot Password</a></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><a href="RegistrationView.jsp">Create New Account</a></td>
+
+				</tr>
 			</table>
 		</div>
 
+
 	</form>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<hr>
+	<%@include file="Footer.jsp"%>
 
 </body>
 </html>
